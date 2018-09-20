@@ -71,7 +71,7 @@ public class SeckillServiceImpl implements SeckillService{
 
         long startTime = seckill.getStartTime().getTime();
         long endTime = seckill.getEndTime().getTime();
-        long nowTime = new Date().getTime();
+        long nowTime = System.currentTimeMillis();
 
         if(nowTime < startTime || nowTime > endTime){
             return new Exposer(false, seckillId, nowTime, startTime, endTime);
