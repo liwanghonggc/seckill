@@ -104,7 +104,6 @@ public class SeckillServiceImpl implements SeckillService{
 
         //执行秒杀逻辑: 记录购买行为 + 减库存
         //将记录购买行为insert语句调整放在前面,减少update语句占用行级锁的时间
-
         Date nowTime = new Date();
 
         try {
